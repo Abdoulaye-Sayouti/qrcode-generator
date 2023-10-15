@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="row" id="toggle-buttons-row">
+                <div class="toggle-buttons">
+                    <button onclick="changeType('text')" id="text-btn" class="active">Text</button>
+                    <button onclick="changeType('url')" id="url-btn">URL</button>
+                    <button onclick="changeType('wifi')" id="wifi-btn">Wi-Fi Network Details</button>
+                </div>    
+            </div>    
+            
+            <div class="row" id="input-fields-row">
+                <div id="text-input" class="input-group">
+                    <textarea id="text" placeholder="Enter your text"></textarea>
+                </div>
+
+                <div id="url-input" class="input-group">
+                    <input type="url" id="url" placeholder="Enter URL">
+                </div>
+
+                <div id="wifi-input" class="input-group">
+                    <input type="text" id="ssid" placeholder="SSID">
+                    <input type="text" id="password" placeholder="Password">
+                    <select id="security">
+                        <option value="WPA">WPA/WPA2</option>
+                        <option value="WEP">WEP</option>
+                        <option value="nopass">None</option>
+                    </select>
+                </div>
+
+                <div class="row" id="bg-color-row">
+                    <label for="bgcolor">Background Color:</label>
+                    <input type="color" id="bgcolor" value="#ffffff">
+                </div>
+                <div class="row" id="dot-color-row">
+                    <label for="dotcolor">Dot Color:</label>
+                    <input type="color" id="dotcolor" value="#000000">
+                </div> 
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            <div class="row" id="generate-buttons-row">
+                <button onclick="generateQR()">Generate QR Code</button>
+            </div>
+            
+            <div class="row" id="qrcode-row">
+                <div id="qrcode"></div>
+            </div>
+
+            <div class="row" id="download-buttons-row">
+                <button onclick="downloadQR('png')" id="download-png">Download PNG</button>
+            </div>
+
+            
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

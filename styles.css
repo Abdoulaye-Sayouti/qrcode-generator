@@ -1,0 +1,226 @@
+body {
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 800px;
+    height: 450px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex; /* Added */
+    /* flex-direction: column; Removed */
+    /* align-items: center; Removed */
+    justify-content: space-between; /* Added */
+}
+
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%; 
+    border-radius: 10px;
+    display: flex;
+    background-color: #9cb2bc; /* Light blue background */
+    flex-direction: column;  /* Vertical direction */
+    justify-content: space-between;  /* Distributes space between the rows */
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+    border-radius: 10px;
+    display: flex;
+    background-color: #e8d8ac; /* Light green background */
+    flex-direction: column;  /* Vertical direction */
+    justify-content: space-between;  /* Distributes space between the rows */
+}
+
+/* Style for each row */
+
+/*.row {
+    flex: 1;  /* Each row will take equal height */
+/*}*/
+
+
+
+
+#toggle-buttons-row {
+    flex: 0.1;
+    display: flex;  /* Enable Flexbox */
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    /* background-color: #d1e0e0;  /* Light greyish-blue color */
+}
+
+
+
+
+
+#input-fields-row {
+    flex: 0.8;
+    /* background-color: #f0f8ff;  /* Alice blue color */
+    position: relative; /* Newly added */
+    min-height: 150px; /* Adjust as per your requirement */
+}
+
+#bg-color-row {
+    flex: 0.1;
+    display: flex;  /* Enable Flexbox */
+    position: relative; /* Newly added */
+    margin-top: 150px;
+   
+}
+#bg-color-row label {
+    margin-right: 10px;
+}
+
+#bg-color-row input[type="color"] {
+    border: none;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#dot-color-row {
+    flex: 0.1;
+    display: flex;  /* Enable Flexbox */
+    margin-top: 20px;
+}
+#dot-color-row label {
+    margin-right: 10px;
+}
+
+#dot-color-row input[type="color"] {
+    border: none;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+#generate-buttons-row {
+    flex: 0.1;
+    display: flex;  /* Enable Flexbox */
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    /*background-color: #3a5268;  /* Alice blue color */
+}
+
+#qrcode-row {
+    flex: 0.9;
+    display: flex;  /* Enable Flexbox */
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    /*background-color: #f0f8ff;  /* Alice blue color */
+}
+
+
+
+#download-buttons-row {
+    flex: 0.1;
+    display: flex;  /* Enable Flexbox */
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    /*background-color: #f0f8ff;  /* Alice blue color */
+    /*background-color: #e6f7ff;  /* Light blue color */
+}
+
+
+
+
+
+
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.toggle-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-buttons button.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.toggle-buttons button:hover,
+.toggle-buttons button.active:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Additional styles */
+.input-group {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    /* Other existing styles */
+    margin-bottom: 100px;
+}
+
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Ensure that the input fields don't exceed the width of the column */
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+
+#download-buttons-row button {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download-buttons-row button:hover {
+    background-color: #0056b3;
+}
+
