@@ -3,7 +3,7 @@
 ![QR Code Generator Screenshot](screenshot.png)
 
 ## Overview
-A simple, user-friendly QR Code Generator built with HTML, CSS, and JavaScript. This application allows users to generate QR codes from Text, URL, and Wi-Fi Network Details and customize its appearance by altering the color of the background and dots of the QR code. 
+A simple, user-friendly QR Code Generator built with QRCode.js, HTML, CSS, and JavaScript. This application allows users to generate QR codes from Text, URL, and Wi-Fi Network Details and customize its appearance by altering the color of the background and dots of the QR code. 
 
 ## Features
 - **Multiple Input Types:**
